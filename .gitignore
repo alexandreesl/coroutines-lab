@@ -17,9 +17,10 @@
 *.zip
 *.tar.gz
 *.rar
-*.jar
 
 .idea/
+.gradle/
+build/
 
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
