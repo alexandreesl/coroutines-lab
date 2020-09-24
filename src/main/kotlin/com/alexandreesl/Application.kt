@@ -1,10 +1,9 @@
 package com.alexandreesl
 
-import kotlinx.coroutines.CoroutineScope
+import com.alexandreesl.examples.BasicExample
+import com.alexandreesl.examples.ContextExample
+import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
 import mu.KotlinLogging
 
 object Application {
@@ -14,24 +13,17 @@ object Application {
     @JvmStatic
     fun main(args: Array<String>) {
 
-
-        val deferred = CoroutineScope(IO).async {
-            logger.info { "running on ${Thread.currentThread().name}" }
-            delay(2000)
-            123
-        }
-
         runBlocking {
 
-            logger.info { "running on ${Thread.currentThread().name}" }
+          val basicExample =  BasicExample()
 
-            val resp = deferred.await()
+          basicExample.runExample()
 
-            logger.info { "the result is $resp" }
+          val contextExample =  ContextExample()
+
+          contextExample.runExample()
 
         }
-
-
 
     }
 
