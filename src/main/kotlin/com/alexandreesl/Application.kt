@@ -2,8 +2,8 @@ package com.alexandreesl
 
 import com.alexandreesl.examples.BasicExample
 import com.alexandreesl.examples.ContextExample
-import kotlinx.coroutines.*
-import kotlinx.coroutines.Dispatchers.IO
+import com.alexandreesl.examples.FlowExample
+import kotlinx.coroutines.runBlocking
 import mu.KotlinLogging
 
 object Application {
@@ -15,13 +15,17 @@ object Application {
 
         runBlocking {
 
-          val basicExample =  BasicExample()
+            val basicExample = BasicExample()
 
-          basicExample.runExample()
+            basicExample.runExample()
 
-          val contextExample =  ContextExample()
+            val contextExample = ContextExample()
 
-          contextExample.runExample()
+            contextExample.runExample()
+
+            val flowExample = FlowExample()
+
+            flowExample.runExample()
 
         }
 
