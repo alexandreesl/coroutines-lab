@@ -1,6 +1,7 @@
 package com.alexandreesl
 
 import com.alexandreesl.examples.BasicExample
+import com.alexandreesl.examples.ChannelExample
 import com.alexandreesl.examples.ContextExample
 import com.alexandreesl.examples.FlowExample
 import kotlinx.coroutines.runBlocking
@@ -26,6 +27,10 @@ object Application {
             val flowExample = FlowExample()
 
             flowExample.runExample()
+
+            val channelExample = ChannelExample()
+
+            channelExample.runExample()
 
         }
 
